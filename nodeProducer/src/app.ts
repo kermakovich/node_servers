@@ -13,9 +13,7 @@ connection.then(
   app.get("/api/v1/customers/:id", async(req,res) => {
     const customer = await customerRepository
                     .findOne({where: { internalId: req.params.id }})
-    res.json({
-        customer: customer
-    })
+    res.json(customer)
     })  
 }
 ).catch(error=>{

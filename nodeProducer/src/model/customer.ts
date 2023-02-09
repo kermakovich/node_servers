@@ -4,7 +4,7 @@ import { Column, Entity, PrimaryColumn } from "typeorm";
 export class customer {   
     
     @PrimaryColumn()
-    internalId: number;
+    id: number;
    
     @Column()
     email: string;
