@@ -16,7 +16,7 @@ let customer = class customer {
 __decorate([
     (0, typeorm_1.PrimaryColumn)(),
     __metadata("design:type", Number)
-], customer.prototype, "internalId", void 0);
+], customer.prototype, "id", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
@@ -26,7 +26,7 @@ __decorate([
     __metadata("design:type", String)
 ], customer.prototype, "company_name", void 0);
 customer = __decorate([
-    (0, typeorm_1.Entity)()
+    (0, typeorm_1.Entity)({ name: "netsuite_customer" })
 ], customer);
 exports.customer = customer;
 //# sourceMappingURL=customer.js.map

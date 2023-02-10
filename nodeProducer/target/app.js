@@ -23,11 +23,8 @@ connection_1.connection.then((connection) => __awaiter(void 0, void 0, void 0, f
     const customerRepository = connection.getRepository(customer_1.customer);
     app.get("/api/v1/customers/:id", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         const customer = yield customerRepository
-            .findOne({ where: { internalId: req.params.id } });
-        res.json({
-            message: "success",
-            payload: customer
-        });
+            .findOne({ where: { id: req.params.id } });
+        res.json(customer);
     }));
 })).catch(error => {
     console.log(error);

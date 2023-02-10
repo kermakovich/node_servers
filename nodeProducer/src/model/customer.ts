@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryColumn } from "typeorm";
 
-@Entity()
+@Entity({name: "netsuite_customer"})
 export class customer {   
     
     @PrimaryColumn()
