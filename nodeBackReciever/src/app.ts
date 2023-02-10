@@ -18,7 +18,7 @@ connection.then(
       console.log("connected")
       const customerRepository = connection.getRepository(customer);
       app.post('/api/v1/customers', async(req, res) => {
-        const customer = await customerRepository.create(req.body)
+        const customer = await customerRepository.create(req.body.data)
         console.log(customer)
         const results = await customerRepository.save(customer)
         return res.send(results)  
